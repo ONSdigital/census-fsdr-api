@@ -1,20 +1,24 @@
 package uk.gov.ons.fsdr.common.dto;
 
-import io.swagger.annotations.ApiModel;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
-@ApiModel
+@AllArgsConstructor
 public class AdeccoResponseList {
 
   String totalSize;
 
   List<AdeccoResponse> records;
+
+  boolean done;
+
+  String nextRecordsUrl;
 
 }

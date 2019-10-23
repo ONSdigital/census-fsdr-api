@@ -2,13 +2,17 @@ package uk.gov.ons.fsdr.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModel;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uk.gov.ons.fsdr.common.dto.AdeccoResponseContact.AdeccoResponseContactBuilder;
 
 @Data
+@Builder
 @NoArgsConstructor
-@ApiModel
+@AllArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class AdeccoResponse {
 
@@ -33,7 +37,13 @@ public class AdeccoResponse {
   @JsonProperty("Name")
   String idBadgeNumber;
 
+  @JsonProperty("Assignment_Status__c")
+  String status;
+
   @JsonProperty("Worker__r")
   AdeccoResponseWorker adeccoResponseWorker;
+
+  @JsonProperty("Status1__c")
+  String crStatus;
 
 }

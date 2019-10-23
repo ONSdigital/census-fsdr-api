@@ -1,13 +1,16 @@
 package uk.gov.ons.fsdr.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModel;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
-@ApiModel
+@AllArgsConstructor
 public class AdeccoResponseContact {
 
   @JsonProperty("Id")
@@ -52,9 +55,6 @@ public class AdeccoResponseContact {
   @JsonProperty("Emergency_Contact_Number__c")
   String emergencyContactNumber1;
 
-  @JsonProperty("TR1__Candidate_Status__c")
-  String status;
-
   //  @JsonProperty("")
   String welshLanguageSpeaker;
 
@@ -66,9 +66,6 @@ public class AdeccoResponseContact {
 
   //  @JsonProperty("Are_you_prepared_to_travel_for_work__c")
   String mobileStaff;
-
-  //  @JsonProperty("")
-  String idBadgeNo;
 
   //  @JsonProperty("")
   String reasonableAdjustments;
