@@ -9,12 +9,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.ons.fsdr.common.dto.AdeccoResponseContact.AdeccoResponseContactBuilder;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
-public class AdeccoResponse {
+public class AdeccoResponse implements Serializable {
 
   @JsonProperty("TR1__Start_Date__c")
   String contractStartDate;
