@@ -7,11 +7,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdeccoResponseJob {
+public class AdeccoResponseJob implements Serializable {
 
   @JsonProperty("Hiring_Manager_First_Name__c")
   String lineManagerFirstName;

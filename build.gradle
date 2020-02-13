@@ -8,6 +8,7 @@ plugins {
 
 description = 'census-fsdr-common'
 
+
 version = rootProject.file('version.txt').text.trim()
 
 group = 'uk.gov.ons'

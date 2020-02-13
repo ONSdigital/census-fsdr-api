@@ -7,11 +7,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LocalAuthorityArea {
+public class LocalAuthorityArea implements Serializable {
   @JsonProperty("Local_Authority__r")
   LocalAuthority localAuthority;
 }

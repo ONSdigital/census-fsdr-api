@@ -1,5 +1,6 @@
 package uk.gov.ons.fsdr.common.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdeccoResponseList {
+public class AdeccoResponseList implements Serializable {
 
   String totalSize;
 
