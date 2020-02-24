@@ -3,45 +3,57 @@ plugins {
     id 'maven'
     id 'maven-publish'
     id 'com.jfrog.artifactory' version '4.8.1'
-
 }
 
 description = 'census-fsdr-common'
-
-
 version = rootProject.file('version.txt').text.trim()
-
 group = 'uk.gov.ons'
 
 sourceCompatibility = 11
 targetCompatibility = 11
 
 dependencies {
-    compile ("com.fasterxml.jackson.core:jackson-core:2.9.8")
-    compile ("com.fasterxml.jackson.core:jackson-databind:2.9.8")
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.8'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
 
-    compile ("io.swagger:swagger-annotations:1.5.0")
-    compile ("javax.validation:validation-api:2.0.1.Final")
+    compile 'io.swagger:swagger-annotations:1.5.0'
+    compile 'javax.validation:validation-api:2.0.1.Final'
 
-    compile("org.projectlombok:lombok:1.18.4")
-    annotationProcessor("org.projectlombok:lombok:1.18.4")
+    compile 'org.projectlombok:lombok:1.18.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
 }
-
 
 repositories {
     mavenLocal()
-    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-release' }
-    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-snapshot' }
+
+    maven {
+        url 'https://ons.jfrog.io/ons/libs-releases-virtual'
+        credentials {
+            username "${artifactory_user}"
+            password "${artifactory_password}"
+        }
+    }
+    maven {
+        url 'https://ons.jfrog.io/ons/libs-snapshots-virtual'
+        credentials {
+            username "${artifactory_user}"
+            password "${artifactory_password}"
+        }
+    }
+
+//    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-release' }
+//    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-snapshot' }
+
     mavenCentral()
 }
 
 artifactory {
-    contextUrl = System.getenv('ARTIFACTORY_URL')
+    contextUrl = 'https://ons.jfrog.io/ons/'
     publish {
         repository {
-            repoKey = 'libs-release-local'
-            username = System.getenv('ARTIFACTORY_USERNAME')
-            password = System.getenv('ARTIFACTORY_PASSWORD')
+            repoKey = 'libs-releases-local'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
         }
     }
 }
