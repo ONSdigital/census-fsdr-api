@@ -47,9 +47,6 @@ repositories {
     mavenCentral()
 }
 
-print "${artifactory_user}"
-print "${artifactory_password}"
-
 artifactory {
     contextUrl = 'https://ons.jfrog.io/ons/'
     publish {
