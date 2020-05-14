@@ -27,6 +27,4 @@ public class AdeccoResponseJob implements Serializable {
   @JsonProperty("Job_Role__r")
   AdeccoResponseJobRole responseJob;
 
-  @JsonProperty("Role_Code__c")
-  String roleId;
 }
