@@ -1,11 +1,14 @@
 package uk.gov.ons.fsdr.common.dto.action;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class JobRoleDTO {
 
   private String uniqueRoleId;
