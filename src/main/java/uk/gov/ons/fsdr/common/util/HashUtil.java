@@ -1,6 +1,5 @@
 package uk.gov.ons.fsdr.common.util;
 
-import org.springframework.util.DigestUtils;
 import uk.gov.ons.fsdr.common.exception.FsdrException;
 
 import javax.xml.bind.DatatypeConverter;
@@ -8,6 +7,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class HashUtil {
 
@@ -17,9 +18,9 @@ public class HashUtil {
     try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(baos)) {
       oos.writeObject(object);
-      byte[] thedigest = DigestUtils.md5Digest(baos.toByteArray());
+      byte[] thedigest = MessageDigest.getInstance("MD5").digest();
       return DatatypeConverter.printHexBinary(thedigest);
-    } catch(IOException e) {
+    } catch(NoSuchAlgorithmException | IOException e) {
       throw new FsdrException("Failed to create hash", e);
     }
   }
