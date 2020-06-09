@@ -18,9 +18,7 @@ public class HashUtil {
     try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(baos)) {
       oos.writeObject(object);
-      MessageDigest md = MessageDigest.getInstance("MD5");
-      md.update(baos.toByteArray());
-      byte[] thedigest = md.digest();
+      byte[] thedigest = MessageDigest.getInstance("MD5").digest(baos.toByteArray());
       return DatatypeConverter.printHexBinary(thedigest);
     } catch(NoSuchAlgorithmException | IOException e) {
       throw new FsdrException("Failed to create hash", e);
