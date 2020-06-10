@@ -48,7 +48,7 @@ public class AdeccoResponse implements Serializable {
   @JsonProperty("Status1__c")
   String crStatus;
 
-  @JsonProperty("Job_Role_Code__c")
-  String roleId;
+  @JsonProperty("Job_Role_Code__r")
+  AdeccoResponseJobRoleCode adeccoResponseJobRoleCode;
 
 }
