@@ -12,9 +12,9 @@ public class ActionQueueConfig {
   public static final String XMA_COORDINATOR_ROUTING_KEY = "xma.coordinator.request";
   public static final String XMA_FIELD_OFFICER_ROUTING_KEY = "xma.field.officer.request";
 
-  public static final String SNOW_LEAVER_ACTIONS_ROUTING_KEY = "snow.leaver.actions.request";
-  public static final String SNOW_MOVER_ACTIONS_ROUTING_KEY = "snow.mover.actions.request";
-  public static final String SNOW_ACTIONS_ROUTING_KEY = "snow.actions.request";
+  public static final String SERVICE_NOW_LEAVER_ACTIONS_ROUTING_KEY = "servicenow.leaver.actions.request";
+  public static final String SERVICE_NOW_MOVER_ACTIONS_ROUTING_KEY = "servicenow.mover.actions.request";
+  public static final String SERVICE_NOW_ACTIONS_ROUTING_KEY = "servicenow.actions.request";
 
   public static final String LWS_ACTIONS_ROUTING_KEY = "lws.actions.request";
 
