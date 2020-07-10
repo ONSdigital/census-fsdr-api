@@ -39,17 +39,9 @@ public class FsdrDTO {
 
   private String telephoneNumberContact2;
 
-  private String emergencyContactFirstName;
-
-  private String emergencyContactSurname;
+  private String emergencyContactFullName;
 
   private String emergencyContactMobileNo;
-
-  private String emergencyContactFirstName2;
-
-  private String emergencyContactSurname2;
-
-  private String emergencyContactMobileNo2;
 
   private String status;
 
