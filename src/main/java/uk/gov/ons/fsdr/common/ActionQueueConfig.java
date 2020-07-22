@@ -19,4 +19,10 @@ public class ActionQueueConfig {
   public static final String LWS_ACTIONS_ROUTING_KEY = "lws.actions.request";
 
   public static final String ADECCO_ACTIONS_ROUTING_KEY = "adecco.actions.request";
+
+  public static final String ACTION_REQUEST_EXCHANGE = "action.request.exchange";
+
+  public static final String GSUITE_ROLE_ID_EXCHANGE = "gsuite.roleid.exchange";
+
+  public static final String GSUITE_ROLE_ID_ROUTING_KEY = "gsuite.roleid";
 }
