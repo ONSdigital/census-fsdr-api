@@ -22,7 +22,8 @@ public class ActionQueueConfig {
 
   public static final String ACTION_REQUEST_EXCHANGE = "action.request.exchange";
 
-  public static final String GSUITE_ROLE_ID_EXCHANGE = "gsuite.roleid.exchange";
+  public static final String HQ_ROLE_ID_EXCHANGE = "hq.roleid.exchange";
 
-  public static final String GSUITE_ROLE_ID_ROUTING_KEY = "gsuite.roleid";
+  public static final String HQ_ROLE_ID_ROUTING_KEY = "hq.roleid";
+
 }
