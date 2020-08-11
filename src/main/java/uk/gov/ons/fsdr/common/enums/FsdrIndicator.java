@@ -6,6 +6,8 @@ public enum FsdrIndicator {
 
   CREATE,
 
+  HQ_GROUPS,
+
   COMPLETE,
 
   UPDATE,
