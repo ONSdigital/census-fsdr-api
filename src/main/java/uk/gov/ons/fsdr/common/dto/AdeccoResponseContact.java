@@ -36,7 +36,7 @@ public class AdeccoResponseContact implements Serializable {
   @JsonProperty("Town__c")
   String town;
 
-  @JsonProperty("County__c")
+  @JsonProperty("County_Town__c")
   String county;
 
   @JsonProperty("Postcode__c")
