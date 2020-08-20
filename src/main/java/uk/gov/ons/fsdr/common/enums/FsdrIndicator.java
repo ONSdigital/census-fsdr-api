@@ -2,11 +2,9 @@ package uk.gov.ons.fsdr.common.enums;
 
 public enum FsdrIndicator {
 
-  NEVER_STARTED,
-
   CREATE,
 
-  HQ_GROUPS,
+  SETUP,
 
   COMPLETE,
 
