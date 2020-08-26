@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class AllocatedDeviceDetails {
   private String deviceId;
   private String uniqueEmployeeId;
+  private DeviceType deviceType;
 }
