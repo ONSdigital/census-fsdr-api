@@ -26,4 +26,9 @@ public class ActionQueueConfig {
 
   public static final String HQ_ROLE_ID_ROUTING_KEY = "hq.roleid";
 
+  public static final String DEVICE_EXCHANGE = "device.exchange";
+
+  public static final String DEVICE_ROUTING_KEY = "device";
+
+
 }
