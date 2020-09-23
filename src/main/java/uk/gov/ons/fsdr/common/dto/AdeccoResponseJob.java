@@ -27,4 +27,10 @@ public class AdeccoResponseJob implements Serializable {
   @JsonProperty("Job_Role__r")
   AdeccoResponseJobRole responseJob;
 
+  @JsonProperty("TR1End_Assignment_Reason__c")
+  String assignmentEndReason;
+
+  @JsonProperty("Assignment_Cancelled_reason__c")
+  String assignmentCancelledReason;
+
 }
