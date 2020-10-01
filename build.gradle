@@ -13,11 +13,13 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 dependencies {
-    compile 'com.fasterxml.jackson.core:jackson-core:2.9.8'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.11.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.11.2'
 
     compile 'io.swagger:swagger-annotations:1.5.0'
     compile 'javax.validation:validation-api:2.0.1.Final'
+    compile("com.jayway.jsonpath:json-path:2.4.0")
+    
 
     compile 'javax.xml.bind:jaxb-api:2.3.0'
 
@@ -42,9 +44,6 @@ repositories {
             password "${artifactory_password}"
         }
     }
-
-//    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-release' }
-//    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-snapshot' }
 
     mavenCentral()
 }
