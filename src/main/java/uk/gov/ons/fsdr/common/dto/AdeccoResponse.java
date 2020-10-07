@@ -18,6 +18,9 @@ import java.io.Serializable;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class AdeccoResponse implements Serializable {
 
+  @JsonProperty("Id")
+  String closingReportId;
+
   @JsonProperty("TR1__Start_Date__c")
   String contractStartDate;
 
