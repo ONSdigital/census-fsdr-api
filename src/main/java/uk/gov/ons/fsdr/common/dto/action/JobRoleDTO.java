@@ -37,12 +37,6 @@ public class JobRoleDTO {
 
   private String contractEndDate;
 
-  private String areaGroup;
-
-  private String coordGroup;
-
-  private String orgUnit;
-
   private String managerEmployeeId;
 
   private Boolean isFieldOfficer;
