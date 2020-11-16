@@ -1,13 +1,23 @@
-package uk.gov.ons.fsdr.common.dto.devicelist;
+package uk.gov.ons.fsdr.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class AdeccoResponseReportsTo {
+import java.io.Serializable;
 
-    @JsonProperty("TR1__Closing_Report__r.Reports_To__r.FirstName")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class AdeccoResponseReportsTo implements Serializable {
+
+    @JsonProperty("FirstName")
     String lineManagerFirstName;
 
-    @JsonProperty("Hiring_Manager_Last_Name__c")
+    @JsonProperty("LastName")
     String lineManagerSurName;
 
 }

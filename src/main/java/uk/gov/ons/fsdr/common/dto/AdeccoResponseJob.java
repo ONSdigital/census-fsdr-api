@@ -15,11 +15,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class AdeccoResponseJob implements Serializable {
 
-  @JsonProperty("Hiring_Manager_First_Name__c")
-  String lineManagerFirstName;
 
-  @JsonProperty("Hiring_Manager_Last_Name__c")
-  String lineManagerSurName;
 
   @JsonProperty("Job_Title__c")
   String jobRole;
