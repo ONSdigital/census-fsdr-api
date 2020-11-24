@@ -15,6 +15,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class AdeccoResponseContact implements Serializable {
 
+
+
   @JsonProperty("Id")
   String employeeId;
 
@@ -65,6 +67,7 @@ public class AdeccoResponseContact implements Serializable {
 
   @JsonProperty("Local_Authority_Area_Id__r")
   LocalAuthorityArea localAuthorityArea;
+
 
   //  @JsonProperty("")
   String areaLocation = "none";

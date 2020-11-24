@@ -18,6 +18,9 @@ import java.io.Serializable;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class AdeccoResponse implements Serializable {
 
+  @JsonProperty("Id")
+  String closingReportId;
+
   @JsonProperty("TR1__Start_Date__c")
   String contractStartDate;
 
@@ -36,6 +39,9 @@ public class AdeccoResponse implements Serializable {
   @JsonProperty("TR1__Job__r")
   AdeccoResponseJob responseJob;
 
+  @JsonProperty("Reports_To__r")
+  AdeccoResponseReportsTo reportsTo;
+
   @JsonProperty("Name")
   String idBadgeNumber;
 
@@ -50,5 +56,14 @@ public class AdeccoResponse implements Serializable {
 
   @JsonProperty("Job_Role_Code__r")
   AdeccoResponseJobRoleCode adeccoResponseJobRoleCode;
+
+  @JsonProperty("TR1__End_Assignment_Reason__c")
+  String assignmentEndReason;
+
+  @JsonProperty("Assignment_Cancelled_reason__c")
+  String assignmentCancelledReason;
+
+
+
 
 }
