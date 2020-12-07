@@ -11,7 +11,6 @@ import uk.gov.ons.fsdr.common.enums.FsdrIndicator;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class ActionRequest {
 
   private FsdrDTO employee;

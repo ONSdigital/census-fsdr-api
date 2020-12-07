@@ -10,7 +10,6 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class FsdrDTO {
 
   private String uniqueEmployeeId;
