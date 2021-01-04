@@ -14,6 +14,8 @@ public class FsdrDTO {
 
   private String uniqueEmployeeId;
 
+  private String externalId;
+
   private String firstName;
 
   private String surname;
@@ -60,8 +62,5 @@ public class FsdrDTO {
 
   private String lineManagerTelephoneContactNo1;
 
-  private JobRoleDTO activeJobRole;
-
-  private JobRoleDTO lastActiveJobRole;
-
+  private JobRoleDTO jobRole;
 }

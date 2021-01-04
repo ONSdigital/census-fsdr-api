@@ -13,6 +13,8 @@ public class JobRoleDTO {
 
   private String uniqueRoleId;
 
+  private String closingReportId;
+
   private String jobRoleType;
 
   private String jobRole;
