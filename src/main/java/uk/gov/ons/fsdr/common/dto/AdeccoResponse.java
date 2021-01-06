@@ -2,12 +2,10 @@ package uk.gov.ons.fsdr.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import uk.gov.ons.fsdr.common.dto.AdeccoResponseContact.AdeccoResponseContactBuilder;
 
 import java.io.Serializable;
 
@@ -56,5 +54,8 @@ public class AdeccoResponse implements Serializable {
 
   @JsonProperty("Job_Role_Code__r")
   AdeccoResponseJobRoleCode adeccoResponseJobRoleCode;
+
+  @JsonProperty("Closing_Report__r")
+  IdBadgeClosingReport idBadgeClosingReport;
 
 }
