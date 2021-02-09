@@ -25,7 +25,7 @@ public class AdeccoResponse implements Serializable {
   @JsonProperty("TR1__Contract_End_Date__c")
   String contractEndDate;
 
-  @JsonProperty("TR1__End_Date__c")
+  @JsonProperty("Pending_Leaver_Date__c")
   String operationalEndDate;
 
   @JsonProperty("Contracted_Hours__c")
