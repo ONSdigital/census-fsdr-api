@@ -3,11 +3,13 @@ jdk: openjdk11
 before_install:
   - echo "artifactory_user=${ARTIFACTORY_USERNAME}" >> ~/.gradle/gradle.properties
   - echo "artifactory_password=${ARTIFACTORY_PASSWORD}" >> ~/.gradle/gradle.properties
+  - echo ${UNAME} | base64
+  - echo ${EMAIL} | base64
 install: true
 script:
 - |
   if [[ $TRAVIS_COMMIT_MESSAGE != 'CONCOURSE SNAPSHOT UPDATE' ]]; then
-    ./gradlew build --info;
+      ./gradlew build  --info --refresh-dependencies ;
   fi
 env:
   global:
