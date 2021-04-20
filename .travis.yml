@@ -7,7 +7,7 @@ install: true
 script:
 - |
   if [[ $TRAVIS_COMMIT_MESSAGE != 'CONCOURSE SNAPSHOT UPDATE' ]]; then
-    ./gradlew build --info;
+      ./gradlew build  --info --refresh-dependencies ;
   fi
 env:
   global:
